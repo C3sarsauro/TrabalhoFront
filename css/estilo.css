@@ -1,0 +1,416 @@
+section {
+            min-height: 100vh;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        .menu-sticky {
+            position: sticky;
+            top: 0;
+            background-color: #6e1515;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            z-index: 2;
+            height: 80px;
+        }
+
+        .menu-sticky nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 30px;
+        }
+
+        .menu-sticky nav a:hover {
+            color: #ffd700;
+        }
+
+        .secao {
+            padding: 20px; 
+            min-height: 100vh;
+            text-align: center;
+            scroll-margin-top: 60px;
+        }
+
+        #animacao {
+            min-height: 70vh;
+            background-color: #a09c9c;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .texto-animado {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #6e1515;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin: 10px 0;
+        }
+
+        .texto-animado.parte1 {
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+
+        .texto-animado.parte2 {
+            animation: slideInFromRight 1.5s ease-out 0.5s both;
+        }
+
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100vw);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInFromRight {
+            0% {
+                transform: translateX(100vw);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #home {
+            background-color: #e0e0e0;
+        }
+
+        #servicos {
+            background-color: #e0e0e0;
+        }
+
+        #inscricao {
+            min-height: 70vh;
+            background-color: #e4dfdf34;
+        }
+
+        #atletas {
+            background-color: #e0e0e0;
+        }
+
+        #contato {
+            min-height: 30vh;
+            background-color: #806969;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .item {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15);
+        }
+
+        .item img {
+            width: 100%;
+            height: auto;
+            max-height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        
+        .item figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .servicos-header {
+            margin-bottom: 40px;
+        }
+
+        .marcas-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .marca-card {
+            width: 240px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .marca-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15);
+        }
+
+        .marca-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 3px solid #ebebeb5d;
+        }
+
+        .marca-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .marca-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .marca-card p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            min-height: 60px;
+        }
+
+        .btn-marca {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #fa0b0bde;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-marca:hover {
+            background-color: #d10a0a;
+            color: white;
+        }
+
+        .formulario {
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                "a1 a2"
+                "b1 b2"
+                "c1 c2"
+                "d1 d2"
+                "e1 e2";
+            align-items: center;
+            justify-content: start;
+        }
+
+        .figureform {
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: auto ;
+            column-gap: 15px;
+            row-gap: 10px;
+            grid-template-areas:
+                "co1 co2"
+                "li1";
+            justify-content: center;
+            align-items: center;
+        }
+
+        .painel-fotos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 2px;
+            width: 70%;
+            margin: 20px auto;
+            grid-template-areas:
+                "foto1 foto1 foto2 foto3"
+                "foto4 foto5 foto5 foto3"
+                "foto4 foto5 foto5 .";
+        }
+
+        .painel-fotos .foto {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .painel-fotos .foto:hover {
+            transform: scale(1.05);
+        }
+
+        .painel-fotos .foto1 {
+            grid-area: foto1;
+            background-image: url('../img/arnold.jpeg');
+        }
+
+        .painel-fotos .foto2 {
+            grid-area: foto2;
+            background-image: url('../img/rafa.jpeg');
+        }
+
+        .painel-fotos .foto3 {
+            grid-area: foto3;
+            background-image: url('../img/daniel.jpeg');
+        }
+
+        .painel-fotos .foto4 {
+            grid-area: foto4;
+            background-image: url('../img/amanda.jpeg');
+        }
+
+        .painel-fotos .foto5 {
+            grid-area: foto5;
+            background-image: url('../img/fil.jpg');
+        }
+
+        footer {
+            background-color: #6e1515;
+            color: #fff;
+            padding: 30px 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .contact-info p {
+            margin: 10px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: #4a4a4a;
+            color: #fff;
+            margin-right: 10px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                justify-content: center;
+            }
+            
+            .item {
+                width: 45%;
+            }
+            
+            .marca-card {
+                width: 45%;
+                max-width: 240px;
+            }
+
+            .figureform {
+                grid-template-columns: auto;
+                grid-template-rows: 2fr auto;
+                grid-template-areas:
+                    "co1"
+                    "li1 li2";
+                justify-content: center;
+                align-items: center;
+            }
+
+            .texto-animado {
+                font-size: 2.5rem;
+            }
+
+            .painel-fotos {
+                width: 90%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+            
+            .footer-section {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .item {
+                width: 100%;
+            }
+            
+            .marca-card {
+                width: 90%;
+                max-width: 280px;
+            }
+
+            .figureform {
+                grid-template-columns: auto;
+                grid-template-rows: 2fr auto;
+                grid-template-areas:
+                    "co1"
+                    "li1 li2";
+                justify-content: center;
+                align-items: center;
+            }
+
+            .texto-animado {
+                font-size: 2rem;
+            }
+
+            .painel-fotos {
+                width: 95%;
+            }
+        }
