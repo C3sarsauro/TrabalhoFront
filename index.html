@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>💪 Tabela de Treino</h1>
+        <h1>Tabela de Treino</h1>
         <p>Organize seus exercícios e acompanhe seu progresso</p>
     </header>
 
@@ -44,25 +44,25 @@
 
                 <div class="btn-group">
                     <button type="submit" class="btn-primary">➕ Adicionar Exercício</button>
-                    <button type="button" class="btn-warning" id="limparForm">🔄 Limpar Formulário</button>
+                    <button type="button" class="btn-warning" id="limparForm">Limpar Formulário</button>
                 </div>
             </form>
         </div>
 
         <div class="btn-group">
-            <button class="btn-success" id="gravar">💾 Salvar no Armazenamento</button>
-            <button class="btn-primary" id="recuperar">📥 Recuperar do Armazenamento</button>
-            <button class="btn-danger" id="limpar">🗑️ Limpar Tudo</button>
+            <button class="btn-success" id="gravar">Salvar no Armazenamento</button>
+            <button class="btn-primary" id="recuperar">Recuperar do Armazenamento</button>
+            <button class="btn-danger" id="limpar">Limpar Tudo</button>
         </div>
 
         <div class="lists-container">
             <div class="list-section">
-                <h3>📋 Exercícios Pendentes</h3>
+                <h3>Exercícios Pendentes</h3>
                 <div id="listaPendentes"></div>
             </div>
 
             <div class="list-section">
-                <h3>✅ Exercícios Concluídos</h3>
+                <h3>Exercícios Concluídos</h3>
                 <div id="listaConcluidos"></div>
             </div>
         </div>
@@ -352,7 +352,7 @@
 
         function concluirExercicio(id) {
             if (gerenciador.concluirExercicio(id)) {
-                mostrarFeedback('Exercício concluído! Parabéns! 💪');
+                mostrarFeedback('Exercício concluído! Parabéns!');
                 renderizarListas();
             }
         }
@@ -413,4 +413,5 @@
         renderizarListas();
     </script>
 </body>
+
 </html>
